@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  font-size: 16px;
+}
+
+body{
+  background-color: hsl(257, 40%, 49%);
+  background-image: url("/images/bg-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  min-height: 100vh;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  overflow-x: hidden;
+}
+
+main{
+  width: 100vw;
+  padding: 2.2rem 2.2rem 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo{
+  width: 8rem;
+  margin-bottom: 3.2rem;
+}
+
+section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+section img{
+  width: 100%;
+  margin-bottom: 3rem;
+}
+
+h1{
+  font-family: 'Poppins', sans-serif;
+  max-width: 500px;
+}
+
+p{
+  line-height: 1.6rem;
+  max-width: 29rem;
+}
+
+h1, p{
+  margin-bottom: 1.5rem;
+}
+
+button{
+  border: none;
+  width: 12rem;
+  color: hsl(257, 40%, 49%);
+  background-color: white;
+  padding: 0.8rem 0;
+  border-radius: 2rem;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-family: 'Poppins', sans-serif;
+  box-shadow: 5px 5px 10px 0px rgba(63, 63, 63, 0.86);
+}
+
+button:hover{
+  background-color: hsl(300, 69%, 71%);
+  transition: 0.4s ease-in-out;
+  color: white;
+}
+
+.social-media-icons{
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 4rem;
+  
+  color: white;
+}
+
+.social-media-icons i{ 
+  border: 1px solid white;
+  border-radius: 100%;
+  width: 2rem;
+  height: 2rem;
+  padding: 0.5rem;
+  text-align: center;
+  color: white;
+}
+
+i:hover{
+  color: hsl(300, 69%, 71%);
+  transition: 0.4s ease-in-out;
+  border: 1px solid hsl(300, 69%, 71%);
+}
+
+/* Media Queries*/
+
+@media (min-width: 380px){
+  body{
+    background-image: url("/images/bg-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+       
+}
+
+@media (min-width: 800px){
+  .logo{
+    width: 20vw;
+    max-width: 250px;
+  }
+  
+  section{
+    flex-direction: row;
+    gap: 2rem;
+  }
+  
+  section img{
+    width: 60%;
+  }
+  
+  .information{
+    text-align: left;
+  }
+  
+  .social-media-icons{
+    justify-content: flex-end;
+    margin-top: 0;
+  }
+  
+  .social-media-icons img{
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  
+}
+
+@media (min-width: 1440px){
+  body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  main{
+    padding: 3rem 3.8rem 2rem;
+  }
+  
+  .logo{
+    margin-top: 3.2rem;
+    margin-bottom: 0;
+  }
+  
+  h1{
+    font-size: 2.5rem;
+  }
+  
+  section{
+    gap: 3rem;
+    margin-top: 5.5rem;
+    align-items: flex-start;
+  }
+  
+  .information{
+    margin-top: 4rem;
+  }
+  
+}
