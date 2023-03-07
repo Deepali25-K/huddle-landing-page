@@ -99,7 +99,7 @@ header{
   margin: 3rem 2rem;
 }
 
-div{
+ main div{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -111,7 +111,7 @@ div{
   gap: 1.5rem;
 }
 
-div img{
+main div img{
   width: 100%;
 }
 
@@ -193,7 +193,7 @@ i:hover{
     grid-template-columns: 1fr 1fr;
   }
   
-  div{
+   main div{
     align-items: flex-start;
     justify-content: center;
     text-align: left;
@@ -235,7 +235,7 @@ i:hover{
     column-gap: 3rem;
   }
   
-  div{
+  main div{
     justify-content: center;
   }
   
