@@ -89,16 +89,14 @@ body{
 }
 
 main{
-  height: 70vh;
   display: flex;
   flex-direction: column;
   padding: 0 2rem;
 }
 
 header{
-  height: 20vh;
   width: 8rem;
-  margin: 3rem 2rem 0;
+  margin: 3rem 2rem;
 }
 
 section{
@@ -148,8 +146,7 @@ button:hover{
 }
 
 footer{
-  height: 10vh;
-  margin: 0 2rem 0;
+  margin: 3rem 2rem;
 }
 
 .social-media-icons{
