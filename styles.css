@@ -1,36 +1,104 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
 
-*{
+/*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
+
+html,
+body,
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+blockquote,
+figure,
+fieldset,
+legend,
+textarea,
+pre,
+iframe,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0;
   padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+button,
+input,
+select {
+  margin: 0;
+}
+
+html {
   box-sizing: border-box;
 }
 
-html{
-  font-size: 16px;
+*, *::before, *::after {
+  box-sizing: inherit;
 }
 
+img,
+video {
+  height: auto;
+  max-width: 100%;
+}
+
+iframe {
+  border: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+/* Custom CSS */
+
 body{
-  background-color: hsl(257, 40%, 49%);
-  background-image: url("/images/bg-mobile.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
   min-height: 100vh;
+  background: hsl(257, 40%, 49%) url("/images/bg-mobile.svg") no-repeat left top;
+  background-size: contain;
+  background-position: 0 top;
   color: white;
   font-family: 'Open Sans', sans-serif;
-  overflow-x: hidden;
 }
 
 main{
-  width: 100vw;
-  padding: 2.2rem 2.2rem 2rem;
+  height: 70vh;
   display: flex;
   flex-direction: column;
+  padding: 0 2rem;
 }
 
-.logo{
+header{
+  height: 20vh;
   width: 8rem;
-  margin-bottom: 3.2rem;
+  margin: 3rem 2rem 0;
 }
 
 section{
@@ -40,23 +108,24 @@ section{
   text-align: center;
 }
 
+.content{
+  padding: 3rem 0.6rem 0 1rem;
+  gap: 1.5rem;
+}
+
 section img{
   width: 100%;
-  margin-bottom: 3rem;
 }
 
 h1{
   font-family: 'Poppins', sans-serif;
-  max-width: 500px;
+  font-size: 1.4rem;
+  font-weight: 600;
 }
 
 p{
   line-height: 1.6rem;
-  max-width: 29rem;
-}
-
-h1, p{
-  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
 }
 
 button{
@@ -78,18 +147,21 @@ button:hover{
   color: white;
 }
 
+footer{
+  height: 10vh;
+  margin: 0 2rem 0;
+}
+
 .social-media-icons{
   display: flex;
   justify-content: center;
   gap: 0.5rem;
-  margin-top: 4rem;
-  
   color: white;
 }
 
 .social-media-icons i{ 
   border: 1px solid white;
-  border-radius: 100%;
+  border-radius: 50%;
   width: 2rem;
   height: 2rem;
   padding: 0.5rem;
@@ -103,77 +175,90 @@ i:hover{
   border: 1px solid hsl(300, 69%, 71%);
 }
 
-/* Media Queries*/
+/* Media Queries */
 
-@media (min-width: 380px){
-  body{
-    background-image: url("/images/bg-desktop.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
+@media (min-width: 600px) and (max-width: 800px){
+  .image{
+    margin: 0 auto;
+    max-width: 35rem;
   }
-       
 }
 
 @media (min-width: 800px){
-  .logo{
-    width: 20vw;
-    max-width: 250px;
+  body{
+    min-height: 100vh;
+    background-image: url("/images/bg-desktop.svg");
+    background-size: cover;
+  }
+  
+  main{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
   
   section{
-    flex-direction: row;
-    gap: 2rem;
-  }
-  
-  section img{
-    width: 60%;
-  }
-  
-  .information{
+    align-items: flex-start;
+    justify-content: center;
     text-align: left;
   }
   
   .social-media-icons{
     justify-content: flex-end;
-    margin-top: 0;
   }
-  
-  .social-media-icons img{
-    width: 2.5rem;
-    height: 2.5rem;
-  }
-  
 }
 
-@media (min-width: 1440px){
+@media (min-width: 800px) and (max-width: 1000px){
+  .content{
+    padding: 0 0.6rem 0 3rem;
+    gap: 1rem;
+    max-width: 30rem;
+  }
+  
+  button{
+    width: 10rem;
+  } 
+}
+
+@media (min-width: 1200px){
   body{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    min-height: 100vh;
+    background-size: contain;
+  }
+  
+  header{
+    height: 11vh;
+    width: 14rem;
+    margin: 0 4rem 0;
   }
   
   main{
-    padding: 3rem 3.8rem 2rem;
-  }
-  
-  .logo{
-    margin-top: 3.2rem;
-    margin-bottom: 0;
-  }
-  
-  h1{
-    font-size: 2.5rem;
+    height: 70vh;
+    padding: 0 4rem;
+    grid-template-columns: 1.2fr 1fr;
+    column-gap: 3rem;
   }
   
   section{
-    gap: 3rem;
-    margin-top: 5.5rem;
-    align-items: flex-start;
+    justify-content: center;
   }
   
-  .information{
-    margin-top: 4rem;
+  
+  
+  h1{
+    font-size: 2.5rem;
+    max-width: 30rem;
+  }
+  
+  p{
+    font-size: 1.2rem;
+  }
+  
+  footer{ 
+    margin: 0 4rem 0;
+  }
+  
+  .social-media-icons{
+    gap: 1rem; 
   }
   
 }
